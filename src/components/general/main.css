@@ -2,7 +2,6 @@
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
-	margin-bottom: 16px;
 }
 
 .address {
@@ -10,13 +9,8 @@
 	flex-direction: column;
 }
 
-.address input {
-	margin-bottom: 16px;
-}
-
 .city-row {
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
-	margin-bottom: 16px;
 }

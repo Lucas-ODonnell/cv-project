@@ -1,0 +1,19 @@
+.current-job-header input {
+	width: 50%;
+}
+
+.date-row {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.description input {
+	width: 100%;
+}
+
+.career-bottom {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}

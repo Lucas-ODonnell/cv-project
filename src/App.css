@@ -56,6 +56,10 @@ body {
 	margin: 0;
 }
 
+input {
+	margin-bottom: 16px;
+}
+
 .container {
 	position: fixed;
 	top: 10%;
@@ -101,18 +105,18 @@ body {
 	font-size: 14px;
 }
 
-.general-border {
+.border {
 	display: flex;
 	justify-content: flex-end;
 }
 
-.general-border button {
+.border button {
 	border: none;
-	background-color: none;
+	background-color: white;
 	cursor: pointer;
 }
 
-.general-border button:hover {
+.border button:hover {
 	color: red;
 }
 
