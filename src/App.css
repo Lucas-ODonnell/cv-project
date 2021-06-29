@@ -132,3 +132,16 @@ input {
 .section-divider {
 	border-bottom: 2px dashed black;
 }
+
+.submit-container {
+	margin-top: 16px;
+}
+
+.submit-container button {
+	background-color: #5ccd5c;
+	width: 100%;
+	font-size: 16px;
+	padding: 10px;
+	display: block;
+	border-radius: 4px;
+}

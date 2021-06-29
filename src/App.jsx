@@ -2,6 +2,7 @@ import './App.css';
 import React, { useState } from 'react';
 import General from "./components/general/General.jsx"; 
 import WorkHistory from "./components/workHistory/WorkHistory.jsx";
+import AllSkills from "./components/skills/AllSkills.jsx";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fas } from '@fortawesome/free-solid-svg-icons';
@@ -10,6 +11,7 @@ library.add(fas)
 const App = () => {
 	const [isClicked, setIsClicked] = useState(false);
 	const [isClickedCareer, setIsClickedCareer] = useState(false);
+	const [isClickedSkills, setIsClickedSkills] = useState(false);
 
 	const toggleVisibilityIcon = (e) => {
 		e.preventDefault();
@@ -19,6 +21,11 @@ const App = () => {
 	const toggleVisibilityIconCareer = (e) => {
 		e.preventDefault();
 		setIsClickedCareer(prev => !prev);
+	}
+
+	const toggleVisibilityIconSkills = (e) => {
+		e.preventDefault();
+		setIsClickedSkills(prev => !prev);
 	}
 
 	const toggleGeneralVisibility = (e) => {
@@ -44,6 +51,17 @@ const App = () => {
 		}
 	}
 
+	const toggleSkillVisibility = (e) => {
+		e.preventDefault();
+		toggleVisibilityIconSkills(e);
+		const skillForm = document.querySelector('[data-all-skills]');
+		if (skillForm.classList.contains('hidden')) {
+			skillForm.classList.remove('hidden');
+		} else {
+			skillForm.classList.add('hidden');
+		}
+	}
+
 	return (
 		<div className="container">
 			<div className="cv-header">
@@ -64,6 +82,17 @@ const App = () => {
 				</div>
 				<br />
 				<WorkHistory />
+				<div className="border" >
+					<button onClick={toggleSkillVisibility} >
+						<FontAwesomeIcon icon={isClickedSkills ? "eye-slash" : "eye"} />
+					</button>
+				</div>
+				<br />
+				<AllSkills />
+				<br />
+				<div className="submit-container">
+				<button>Submit</button>
+				</div>
 			</form>
 		</div>
 	)
