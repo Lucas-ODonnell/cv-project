@@ -88,7 +88,12 @@ input {
 }
 
 .cv-form {
+	display: flex;
+	flex-direction: column;
 	padding: 30px 40px;
+	flex: 1 1 auto;
+  overflow-y: scroll;
+  height: 80vh;
 }
 
 .cv-form label {
@@ -122,4 +127,8 @@ input {
 
 .hidden {
 	display: none;
+}
+
+.section-divider {
+	border-bottom: 2px dashed black;
 }

@@ -17,3 +17,20 @@
 	align-items: center;
 	justify-content: space-around;
 }
+
+.work-history button {
+	width: 100%;
+	font-size: 16px;
+	padding: 10px;
+	display: block;
+	border-radius: 4px;
+}
+
+.work-history button:hover {
+	font-size: 16px;
+	border: 2px solid red;
+}
+
+.previous-job-header input {
+	width: 50%
+}

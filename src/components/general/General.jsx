@@ -7,6 +7,8 @@ const General = () => {
 		<div data-is-general className="general">
 			<Name />
 			<Address />
+			<div className="section-divider"></div>
+			<br />
 		</div>
 	)
 }
