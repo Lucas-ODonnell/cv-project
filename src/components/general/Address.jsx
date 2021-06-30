@@ -1,43 +1,79 @@
 import React from 'react';
-const Address = () => {
+const Address = ({handleInputChange}) => {
 	return (
 		<div className="address">
-			<label htmlFor="street-one">Address Line 1</label>
-			<input type="text" id="street-one-input" />
-			<label htmlFor="street-two">Address Line 2</label>
-			<input type="text" id="street-two-input" />
+			<label>Address Line 1</label>
+			<input 
+				name="addressLineOne"
+				type="text"
+				onChange={handleInputChange}
+			/>
+			<label>Address Line 2</label>
+			<input 
+				name="addressLineTwo"
+				type="text" 
+				onChange={handleInputChange}
+			/>
 			<div className ="city-row">
 				<div>
-					<label htmlFor="city">City</label>
-					<input type="text" id="city-input" />
+					<label>City</label>
+					<input 
+						name="city"
+						type="text" 
+						onChange={handleInputChange}
+					/>
 				</div>
 				<div>
-					<label htmlFor="state">State</label>
-					<input type="text" id="state-input" />
+					<label>State</label>
+					<input 
+						name="State"
+						type="text" 
+						onChange={handleInputChange}
+					/>
 				</div>
 				<div>
-					<label htmlFor="zip">Zip Code</label>
-					<input type="number" id="zip-input" />
+					<label>Zip Code</label>
+					<input 
+						name="zipcode"
+						type="number"  
+						onChange={handleInputChange}
+					/>
 				</div>
 			</div>
 			<div className="country-row">
 				<div>
-					<label htmlFor="country">Country</label>
-					<input type="text" id="country-input" />
+					<label>Country</label>
+					<input 
+						name="country"
+						type="text" 
+						onChange={handleInputChange}
+					/>
 				</div>
 				<div>
-					<label htmlFor="phone">Phone</label>
-					<input type="text" id="phone-input" />
+					<label>Phone</label>
+					<input 
+						name="phone"
+						type="text"  
+						onChange={handleInputChange}
+					/>
 				</div>
 			</div>
 			<div className="email-row">
 				<div>
-					<label htmlFor="email">Email</label>
-					<input type="email" id="email-input" />
+					<label>Email</label>
+					<input 
+						name="email"
+						type="email" 
+						onChange={handleInputChange}
+					/>
 				</div>
 				<div>
-					<label htmlFor="alma-mater">Alma Mater</label>
-					<input type="text" id="alma-mater-input" />
+					<label>Alma Mater</label>
+					<input 
+						name="almaMater"
+						type="text"
+						onChange={handleInputChange}
+					/>
 				</div>
 			</div>
 		</div>

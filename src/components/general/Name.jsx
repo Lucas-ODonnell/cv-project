@@ -1,14 +1,22 @@
 import React from 'react';
-const Name = () => {
+const Name = ({handleInputChange}) => {
 	return (
 		<div className="header">
 			<div>
-				<label htmlFor="first-name">First Name</label>
-				<input type="text" id="first-name-input"/>
+				<label>First Name</label>
+				<input 
+					name="firstName"
+					type="text" 
+					onChange={handleInputChange}
+				/>
 			</div>
 			<div>
-				<label htmlFor="last-name">Last Name</label>
-				<input type="text" id="last-name-input" />
+				<label>Last Name</label>
+				<input 
+					name="lastName"
+					type="text"
+					onChange={handleInputChange}
+				/>
 			</div>
 		</div>
 	)

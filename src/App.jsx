@@ -12,6 +12,7 @@ const App = () => {
 	const [isClicked, setIsClicked] = useState(false);
 	const [isClickedCareer, setIsClickedCareer] = useState(false);
 	const [isClickedSkills, setIsClickedSkills] = useState(false);
+	const [cvObject, setCVObject] = useState({});
 
 	const toggleVisibilityIcon = (e) => {
 		e.preventDefault();
@@ -62,19 +63,33 @@ const App = () => {
 		}
 	}
 
+	const handleInputChange = (e) => {
+		e.preventDefault();
+		const target = e.target;
+		const value = target.value;
+		const name = target.name;
+		setCVObject({...cvObject, [name]: value});
+	}
+
+	const jsonFunction = (e) => {
+		e.preventDefault();
+		const stringified = JSON.stringify(cvObject);
+		console.log(stringified);
+	}
+
 	return (
 		<div className="container">
 			<div className="cv-header">
 				<h2>Your CV</h2>
 			</div>
-			<form className="cv-form">
+			<form className="cv-form" onSubmit={jsonFunction}>
 				<div className="border" >
 					<button onClick={toggleGeneralVisibility} >
 						<FontAwesomeIcon icon={isClicked ? "eye-slash" : "eye"} />
 					</button>
 				</div>
 				<br />
-				<General />
+				<General {...{handleInputChange}}/>
 				<div className="border" >
 					<button onClick={toggleCareerVisibility} >
 						<FontAwesomeIcon icon={isClickedCareer ? "eye-slash" : "eye"} />
@@ -91,7 +106,7 @@ const App = () => {
 				<AllSkills />
 				<br />
 				<div className="submit-container">
-				<button>Submit</button>
+				<button type="submit">Submit</button>
 				</div>
 			</form>
 		</div>
