@@ -1,18 +1,18 @@
 import React from 'react';
-const Address = ({handleInputChange}) => {
+const Address = ({handleGeneralInputChange}) => {
 	return (
 		<div className="address">
 			<label>Address Line 1</label>
 			<input 
 				name="addressLineOne"
 				type="text"
-				onChange={handleInputChange}
+				onChange={handleGeneralInputChange}
 			/>
 			<label>Address Line 2</label>
 			<input 
 				name="addressLineTwo"
 				type="text" 
-				onChange={handleInputChange}
+				onChange={handleGeneralInputChange}
 			/>
 			<div className ="city-row">
 				<div>
@@ -20,7 +20,7 @@ const Address = ({handleInputChange}) => {
 					<input 
 						name="city"
 						type="text" 
-						onChange={handleInputChange}
+						onChange={handleGeneralInputChange}
 					/>
 				</div>
 				<div>
@@ -28,7 +28,7 @@ const Address = ({handleInputChange}) => {
 					<input 
 						name="State"
 						type="text" 
-						onChange={handleInputChange}
+						onChange={handleGeneralInputChange}
 					/>
 				</div>
 				<div>
@@ -36,7 +36,7 @@ const Address = ({handleInputChange}) => {
 					<input 
 						name="zipcode"
 						type="number"  
-						onChange={handleInputChange}
+						onChange={handleGeneralInputChange}
 					/>
 				</div>
 			</div>
@@ -46,7 +46,7 @@ const Address = ({handleInputChange}) => {
 					<input 
 						name="country"
 						type="text" 
-						onChange={handleInputChange}
+						onChange={handleGeneralInputChange}
 					/>
 				</div>
 				<div>
@@ -54,7 +54,7 @@ const Address = ({handleInputChange}) => {
 					<input 
 						name="phone"
 						type="text"  
-						onChange={handleInputChange}
+						onChange={handleGeneralInputChange}
 					/>
 				</div>
 			</div>
@@ -64,7 +64,7 @@ const Address = ({handleInputChange}) => {
 					<input 
 						name="email"
 						type="email" 
-						onChange={handleInputChange}
+						onChange={handleGeneralInputChange}
 					/>
 				</div>
 				<div>
@@ -72,7 +72,7 @@ const Address = ({handleInputChange}) => {
 					<input 
 						name="almaMater"
 						type="text"
-						onChange={handleInputChange}
+						onChange={handleGeneralInputChange}
 					/>
 				</div>
 			</div>

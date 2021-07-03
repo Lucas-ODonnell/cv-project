@@ -1,5 +1,5 @@
 import React from 'react';
-const Name = ({handleInputChange}) => {
+const Name = ({handleGeneralInputChange}) => {
 	return (
 		<div className="header">
 			<div>
@@ -7,7 +7,7 @@ const Name = ({handleInputChange}) => {
 				<input 
 					name="firstName"
 					type="text" 
-					onChange={handleInputChange}
+					onChange={handleGeneralInputChange}
 				/>
 			</div>
 			<div>
@@ -15,7 +15,7 @@ const Name = ({handleInputChange}) => {
 				<input 
 					name="lastName"
 					type="text"
-					onChange={handleInputChange}
+					onChange={handleGeneralInputChange}
 				/>
 			</div>
 		</div>
