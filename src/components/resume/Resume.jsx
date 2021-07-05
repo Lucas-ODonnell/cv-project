@@ -4,7 +4,7 @@ import WorkHistory from "./workHistory/WorkHistory.jsx";
 import AllSkills from "./skills/AllSkills.jsx";
 import Sections from "./Sections.jsx";
 const Resume = () => {
-	const [cvObject, setCVObject] = useState({});
+	const [generalObject, setGeneralObject] = useState({});
 	const [jobObject, setJobObject] = useState([]);
 
 	const handleGeneralInputChange = (e) => {
@@ -12,7 +12,7 @@ const Resume = () => {
 		const target = e.target;
 		const value = target.value;
 		const name = target.name;
-		setCVObject({...cvObject, [name]: value});
+		setGeneralObject({...generalObject, [name]: value});
 	}
 
 	const handleJobInput = (e) => {
@@ -21,13 +21,11 @@ const Resume = () => {
 		const value = target.value;
 		const name = target.name;
 		setJobObject({...jobObject, [name]: value});
-		console.log(jobObject)
-		setCVObject({...cvObject, "jobs":[jobObject]})
 	}
 
 	const jsonFunction = (e) => {
 		e.preventDefault();
-		const stringified = JSON.stringify(cvObject);
+		const stringified = JSON.stringify(jobObject);
 		console.log(stringified);
 	}
 	return (
@@ -37,7 +35,7 @@ const Resume = () => {
 			</div>
 			<form className="cv-form" onSubmit={jsonFunction}>
 				<Sections>
-					<General {...{handleGeneralInputChange}}/>
+					<General {...{generalObject, handleGeneralInputChange}}/>
 				</Sections>
 				<Sections> 
 					<WorkHistory {...{handleJobInput}} />

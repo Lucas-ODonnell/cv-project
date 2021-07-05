@@ -51,6 +51,12 @@ table {
 	box-sizing: border-box;
 }
 
+span {
+	font-weight: bold;
+	margin-bottom: 5px;
+	margin-right: 5px;
+}
+
 body {
 	background-color: rgb(205,92,92);
 	margin: 0;
@@ -127,10 +133,6 @@ input {
 
 .hidden {
 	display: none;
-}
-
-.section-divider {
-	border-bottom: 2px dashed black;
 }
 
 .submit-container {

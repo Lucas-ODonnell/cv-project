@@ -2,12 +2,12 @@ import React from 'react';
 
 const Job = ({handleJobInput}) => {
 	return (
-		<div className="current-job">
-			<div className="current-job-header">
+		<div className="job">
+			<div className="job-header">
 				<label>Job</label>
 				<input 
 					type="text" 
-					name="currentJob" 
+					name="job" 
 					onChange={handleJobInput}
 				/>
 			</div>
@@ -57,7 +57,6 @@ const Job = ({handleJobInput}) => {
 					</div>
 				</div>
 			</div>
-			<div className="section-divider"></div>
 			<br />
 		</div>
 )

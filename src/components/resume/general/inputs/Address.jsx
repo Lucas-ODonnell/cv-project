@@ -1,5 +1,5 @@
 import React from 'react';
-const Address = ({handleGeneralInputChange}) => {
+const Address = ({handleGeneralInputChange, generalInfoObject}) => {
 	return (
 		<div className="address">
 			<label>Address Line 1</label>
@@ -7,12 +7,14 @@ const Address = ({handleGeneralInputChange}) => {
 				name="addressLineOne"
 				type="text"
 				onChange={handleGeneralInputChange}
+				defaultValue={generalInfoObject.addressLineOne}
 			/>
 			<label>Address Line 2</label>
 			<input 
 				name="addressLineTwo"
 				type="text" 
 				onChange={handleGeneralInputChange}
+				defaultValue={generalInfoObject.addressLineTwo}
 			/>
 			<div className ="city-row">
 				<div>
@@ -21,14 +23,16 @@ const Address = ({handleGeneralInputChange}) => {
 						name="city"
 						type="text" 
 						onChange={handleGeneralInputChange}
+						defaultValue={generalInfoObject.city}
 					/>
 				</div>
 				<div>
 					<label>State</label>
 					<input 
-						name="State"
+						name="state"
 						type="text" 
 						onChange={handleGeneralInputChange}
+						defaultValue={generalInfoObject.state}
 					/>
 				</div>
 				<div>
@@ -37,6 +41,7 @@ const Address = ({handleGeneralInputChange}) => {
 						name="zipcode"
 						type="number"  
 						onChange={handleGeneralInputChange}
+						defaultValue={generalInfoObject.zipcode}
 					/>
 				</div>
 			</div>
@@ -47,6 +52,7 @@ const Address = ({handleGeneralInputChange}) => {
 						name="country"
 						type="text" 
 						onChange={handleGeneralInputChange}
+						defaultValue={generalInfoObject.country}
 					/>
 				</div>
 				<div>
@@ -55,6 +61,7 @@ const Address = ({handleGeneralInputChange}) => {
 						name="phone"
 						type="text"  
 						onChange={handleGeneralInputChange}
+						defaultValue={generalInfoObject.phone}
 					/>
 				</div>
 			</div>
@@ -65,6 +72,7 @@ const Address = ({handleGeneralInputChange}) => {
 						name="email"
 						type="email" 
 						onChange={handleGeneralInputChange}
+						defaultValue={generalInfoObject.email}
 					/>
 				</div>
 				<div>
@@ -73,6 +81,7 @@ const Address = ({handleGeneralInputChange}) => {
 						name="almaMater"
 						type="text"
 						onChange={handleGeneralInputChange}
+						defaultValue={generalInfoObject.almaMater}
 					/>
 				</div>
 			</div>
