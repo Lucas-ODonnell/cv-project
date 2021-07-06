@@ -12,7 +12,8 @@ const WorkHistory = () => {
 		endDate: "",
 		description: "",
 		quit: "",
-		jobPhone: ""
+		jobPhone: "",
+		id: uniqid()
 	});
 	const [jobArray, setJobArray] = useState(generatedJobs);
 
@@ -37,9 +38,14 @@ const WorkHistory = () => {
 			endDate: "",
 			description: "",
 			quit: "",
-			jobPhone: ""
+			jobPhone: "",
+			id: uniqid()
 		});
 	}
+
+	const deleteJob = (id) => {
+		setJobArray(jobArray.filter(job => job.id !== id))
+	} 
 
 	return (
 		<div data-work-history className="work-history">
@@ -49,7 +55,10 @@ const WorkHistory = () => {
 					:
 						jobArray.map((job) => {
 							return (
-								<div className="each-job" key={uniqid()}>
+								<div className="each-job" key={job.id}>
+									<div className="delete">
+										<button onClick={() => deleteJob(job.id)}>&times;</button>
+									</div>
 									<div className="job-row">
 										<div>
 											<span>Job:</span>
