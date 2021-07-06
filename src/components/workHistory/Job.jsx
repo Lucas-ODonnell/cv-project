@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Job = ({handleJobInput}) => {
+const Job = ({handleJobInput, jobObject}) => {
 	return (
 		<div className="job">
 			<div className="job-header">
@@ -8,6 +8,7 @@ const Job = ({handleJobInput}) => {
 				<input 
 					type="text" 
 					name="job" 
+					value={jobObject.job}
 					onChange={handleJobInput}
 				/>
 			</div>
@@ -18,6 +19,7 @@ const Job = ({handleJobInput}) => {
 						<input 
 							type="date" 
 							name="startDate"
+							value={jobObject.startDate}
 							onChange={handleJobInput}
 						/>
 					</div>
@@ -26,6 +28,7 @@ const Job = ({handleJobInput}) => {
 						<input 
 							type="date" 
 							name="endDate"
+							value={jobObject.endDate}
 							onChange={handleJobInput}
 						/>
 					</div>
@@ -35,6 +38,7 @@ const Job = ({handleJobInput}) => {
 					<input 
 						type="text" 
 						name="description"
+						value={jobObject.description}
 						onChange={handleJobInput}
 					/>
 				</div>
@@ -44,6 +48,7 @@ const Job = ({handleJobInput}) => {
 						<input 
 							type="text" 
 							name="quit" 
+							value={jobObject.quit}
 							onChange={handleJobInput}
 						/>
 					</div>
@@ -52,6 +57,7 @@ const Job = ({handleJobInput}) => {
 						<input 
 							type="tel" 
 							name="jobPhone" 
+							value={jobObject.jobPhone}
 							onChange={handleJobInput}
 						/>
 					</div>

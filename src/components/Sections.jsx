@@ -5,7 +5,7 @@ import { fas } from '@fortawesome/free-solid-svg-icons';
 library.add(fas)
 
 const Sections = ({ children }) => {
-	const [show, setShow] = useState(true);
+	const [show, setShow] = useState(false);
 	return (
 		<section>
 			<div className="border">
@@ -15,7 +15,7 @@ const Sections = ({ children }) => {
 						setShow(!show);
 					}}
 				>
-					<FontAwesomeIcon icon={show ? "eye" : "eye-slash"} />
+					<FontAwesomeIcon icon={show ? "minus" : "plus"} />
 				</button>
 			</div>
 			{show && (

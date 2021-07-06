@@ -3,10 +3,12 @@ import Name from "./inputs/Name.jsx"
 import Address from "./inputs/Address.jsx"
 import RenderGeneralView from "./views/RenderGeneralView.jsx"
 import "./main.css"
-const General = ({handleGeneralInputChange, generalObject}) => {
-	const [showForm, setShowForm] = useState(false)
+const General = () => {
 	const generalInfo = localStorage.getItem('generalInformation');
 	const generalInfoObject = JSON.parse(generalInfo);
+	const [generalObject, setGeneralObject] = useState(generalInfoObject);
+	const [showForm, setShowForm] = useState(false)
+	
 	const updateForm = (e) => {
 		e.preventDefault()
 		if (showForm) {
@@ -14,15 +16,23 @@ const General = ({handleGeneralInputChange, generalObject}) => {
 		}
 		setShowForm(!showForm);
 	}
+
+	const handleGeneralInputChange = (e) => {
+		e.preventDefault();
+		const target = e.target;
+		const value = target.value;
+		const name = target.name;
+		setGeneralObject({...generalObject, [name]: value});
+	}
 	return (
 		<div data-is-general className="general">
 			{showForm ?
-				<div>
+				<div className="input-show">
 					<Name {...{handleGeneralInputChange, generalInfoObject}}/>
 					<Address {...{handleGeneralInputChange, generalInfoObject}}/>
 				</div>
 				:
-				<div>
+				<div className="view-show">
 					<RenderGeneralView {...{generalInfoObject}}/>
 				</div>
 			}

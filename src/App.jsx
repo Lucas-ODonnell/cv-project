@@ -1,6 +1,6 @@
 import './App.css';
 import React from 'react';
-import Resume from './components/resume/Resume.jsx';
+import Resume from './components/Resume.jsx';
 
 const App = () => {
 		return (
