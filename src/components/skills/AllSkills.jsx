@@ -8,6 +8,7 @@ const AllSkills = () => {
 	const generateSkills = JSON.parse(getSkillsFromLocalStorage);
 	const [skillObject, setSkillObject] = useState({skill:"", certification: "", id: uniqid()});
 	const [skillArray, setSkillArray] = useState(generateSkills);
+	const [standard, setStandard] = useState(true);
 
 	useEffect(() => {
 		localStorage.setItem('skillArray', JSON.stringify(skillArray))
@@ -27,6 +28,11 @@ const AllSkills = () => {
 		setSkillObject({skill:"", certification: "", id: uniqid()});
 	}
 
+	const updateSkill = (e) => {
+		e.preventDefault();
+		setStandard(!standard)
+	}
+
 	const deleteSkill = (id) => {
 		setSkillArray(skillArray.filter(skill => skill.id !== id))
 
@@ -40,7 +46,7 @@ const AllSkills = () => {
 					:
 						skillArray.map((skill) => {
 							return (
-								<div className="each-skill" key={skill.id}>
+								<div className="each-skill" key={skill.id} onClick={updateSkill}>
 									<div className="delete">
 										<button onClick={() => deleteSkill(skill.id)}>&times;</button>
 									</div>

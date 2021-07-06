@@ -3,8 +3,8 @@ import React from 'react';
 import Resume from './components/Resume.jsx';
 
 const App = () => {
-		return (
-			<Resume />
-			)
+	return (
+		<Resume />
+	)
 }
 export default App;

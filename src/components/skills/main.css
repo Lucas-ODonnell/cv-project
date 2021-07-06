@@ -21,6 +21,11 @@
 	padding: 20px 30px;
 	margin-bottom: 8px;
 	border-radius: 4px;
+	cursor: pointer;
+}
+
+.each-skill:hover {
+	border: 2px solid red;
 }
 
 .skill-row {
